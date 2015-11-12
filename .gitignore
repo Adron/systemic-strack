@@ -1,0 +1,16 @@
+
+# Ignore WebStorm Settings
+.idea
+
+# The general files you include for a simpler node.js development life.
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.lock-wscript
+build/Release
+node_modules
