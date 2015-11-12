@@ -1,0 +1,13 @@
+{
+  "stash": {
+    "host": "git.hdquotecenter.com",
+    "path": {
+      "projects": "/rest/api/1.0/projects/",
+      "repositories": "/repos/"
+    }
+  },
+  "git": {},
+  "rackspace": {
+
+  }
+}
