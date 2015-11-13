@@ -58,4 +58,5 @@ describe('scmStash', function () {
             })
         })
     })
+
 });
