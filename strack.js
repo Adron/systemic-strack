@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var program = require('commander');
 var scmStash = require('./lib/hdqc/scmStash');
 
