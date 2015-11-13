@@ -23,8 +23,21 @@ describe('scmStash', function () {
             scmStash.getProjectListing(function (data) {
                 var itemToTest = data.values[0];
                 itemToTest.id.should.be.above(0);
-                itemToTest.name.should.not.be.empty;
+                done();
+            })
+        });
+
+        it('should return project records', function (done) {
+            scmStash.getProjectListing(function (data) {
+                var itemToTest = data.values[0];
                 itemToTest.key.should.not.be.empty;
+                done();
+            })
+        });
+
+        it('should return project records', function (done) {
+            scmStash.getProjectListing(function (data) {
+                var itemToTest = data.values[0];
                 itemToTest.link.url.should.not.be.empty;
                 done();
             })
