@@ -1,5 +1,6 @@
 /**
- * Created by ahall on 11/11/15.
+ * Created by Adron on 11/11/15.
+ * Description: tests (integration) for the scmStash library.
  */
 
 var http = require('http');
@@ -49,14 +50,11 @@ describe('scmStash', function () {
             scmStash.getProjectListing(function (data) {
                 var itemToTest = data.values[0];
                 scmStash.getRepositories(function (data) {
-
                     var records = data.size;
                     records.should.be.above(-1);
-
                     done();
                 }, itemToTest.key);
             })
         })
     })
-
 });

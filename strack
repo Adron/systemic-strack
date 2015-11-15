@@ -4,7 +4,6 @@ var program = require('commander');
 var clone = require("nodegit").Clone.clone;
 var scmStash = require('./lib/hdqc/scmStash');
 
-
 var command = {};
 
 program
@@ -36,7 +35,7 @@ function getRepos(name, url, key) {
     }, key);
 }
 
-function getReposOnly(name, url, key) {
+function getReposOnly(key) {
     scmStash.getRepositories(function (repos) {
         for (var r = 0; r < repos.size; r++) {
             var repo = repos.values[r];
@@ -54,36 +53,6 @@ function listProjectsAndRepositories(reposOnly) {
             } else {
                 getReposOnly(project.name, project.link.url, project.key);
             }
-        }
-    })
-}
-
-function backupRepo(projectKey) {
-    scmStash.getRepositories(function (repos) {
-        for (var r = 0; r < repos.size; r++) {
-            var repo = repos.values[r];
-
-            console.log('that too');
-
-            clone(repo.cloneUrl, '../CodeBackup/' + repo.slug, null)
-                .then(function (repo) {
-                    console.log('that');
-                });
-
-            //.then(function(repository) {
-            //    var therepo = repository;
-            //    console.log(therepo.name + ' is cloned.');
-            //});
-
-        }
-    }, projectKey);
-}
-
-function backup() {
-    scmStash.getProjectListing(function (data) {
-        for (var i = 0; i < data.size; i++) {
-            var project = data.values[i];
-            backupRepo(project.key);
         }
     })
 }
