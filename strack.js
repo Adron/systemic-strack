@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-// var clone = require("nodegit").Clone.clone;
 var scmStash = require('./lib/hdqc/scmStash');
 
 var command = {};
