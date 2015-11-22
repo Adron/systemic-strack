@@ -13,7 +13,6 @@ program
     .action(function (cmd) {
         command = cmd;
     })
-    .parse(process.argv);
 
 function listProjects() {
     scmStash.getProjectListing(function (data) {
@@ -74,3 +73,5 @@ if (typeof command === 'undefined') {
     console.log('Backing up started.');
     backup();
 }
+
+program.parse(process.argv);
