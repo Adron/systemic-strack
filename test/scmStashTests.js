@@ -7,7 +7,7 @@ var http = require('http');
 var assert = require('assert');
 var chai = require('chai').should();
 
-var scmStash = require('../../../lib/hdqc/scmStash');
+var scmStash = require('../lib/hdqc/scmStash');
 
 describe('scmStash', function () {
 
