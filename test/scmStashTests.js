@@ -15,7 +15,7 @@ describe('scmStash', function () {
         it('should return project records', function (done) {
             scmStash.getProjectListing(function (data) {
                 var recordsReturned = data.size;
-                recordsReturned.should.be.above(1000);
+                recordsReturned.should.be.above(0);
                 done();
             })
         });
