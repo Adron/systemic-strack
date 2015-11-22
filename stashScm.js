@@ -21,16 +21,16 @@ var options = {
   }
 };
 
-function callback(error, response, body) {
+function getProjectListing(error, response, body) {
   if (!error && response.statusCode == 200) {
     var info = JSON.parse(body);
     //console.log(info);
-
+    console.log("  - Projects");
     for(var i=0; i < info.size; i++) {
-      console.log(info.values[i].name);
+      console.log('      ' + info.values[i].name);
     }
 
   }
 }
 
-request(options, callback);
+request(options, getProjectListing);
