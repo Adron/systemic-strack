@@ -1,6 +1,7 @@
 
 # Ignore WebStorm Settings
 .idea
+.DS_Store
 
 # The general files you include for a simpler node.js development life.
 logs
