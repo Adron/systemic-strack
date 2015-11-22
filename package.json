@@ -4,7 +4,8 @@
   "description": "Systemic Automation Tooling Command Line Interface",
   "main": "strack.js",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "nodegit": "^0.5.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
