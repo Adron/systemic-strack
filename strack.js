@@ -20,7 +20,7 @@ if (program.repositories && program.projects) {
 } else if (program.projects) {
     stashScm.listProjects();
 } else if (program.repositories) {
-
+    stashScm.listRepositories();
 }
 
 if (typeof command === 'undefined') {
