@@ -16,9 +16,9 @@ program
     .parse(process.argv);
 
 if (program.repositories && program.projects) {
-    stashScm.listProjects();
-} else if (program.projects) {
     stashScm.listProjectsRepositories();
+} else if (program.projects) {
+    stashScm.listProjects();
 } else if (program.repositories) {
 
 }
