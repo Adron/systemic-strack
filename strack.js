@@ -28,5 +28,5 @@ if (typeof command === 'undefined') {
     process.exit(1);
 } else if (command == 'backup') {
     console.log('Backing up started.');
-    backup();
+    stashScm.backupRepositories();
 }
