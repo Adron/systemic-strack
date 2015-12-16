@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-var program = require('commander');
-var stashScm = require('./lib/sources/stashScm');
+var program = require("commander");
+var stashScm = require("./lib/sources/stashScm");
 
 var command = {};
 
 program
-    .version('0.0.1')
-    .option('-p, --projects', 'List Projects')
-    .option('-r, --repositories', 'List All Repositories on Server.')
-    .arguments('<cmd>')
+  .version("0.0.1")
+  .option("-p, --projects", "List Projects")
+  .option("-r, --repositories", "List All Repositories on Server.")
+  .arguments("<cmd>")
     .action(function (cmd) {
         command = cmd;
     })
@@ -23,9 +23,9 @@ if (program.repositories && program.projects) {
     stashScm.listRepositories();
 }
 
-if (typeof command === 'undefined') {
-    console.error('no command given!');
+if (typeof command === "undefined") {
+    console.error("no command given!");
     process.exit(1);
-} else if (command == 'backup') {
+} else if (command == "backup") {
     stashScm.backupRepositories();
 }
